@@ -28,6 +28,7 @@ import android.content.Intent;
 import android.os.Bundle;
 import android.text.TextUtils;
 import android.widget.ProgressBar;
+import android.widget.Toast;
 
 import com.actionbarsherlock.app.ActionBar;
 import com.actionbarsherlock.view.Menu;
@@ -176,6 +177,9 @@ public class RepositoryViewActivity extends
             return true;
         case id.m_share:
             shareRepository();
+            return true;
+        case id.m_fork:
+            Toast.makeText(this, "Clicked", Toast.LENGTH_SHORT).show();
             return true;
         case id.m_refresh:
             checkStarredRepositoryStatus();
